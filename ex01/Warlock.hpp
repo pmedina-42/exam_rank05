@@ -1,20 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Warlock.hpp                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 20:04:42 by pmedina-          #+#    #+#             */
-/*   Updated: 2022/02/16 22:10:00 by pmedina-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef WARLOCK_H
-# define WARLOCK_H
+#define WARLOCK_H
 
-#include <string>
 #include <iostream>
+#include <string>
 #include <map>
 #include "ASpell.hpp"
 #include "ATarget.hpp"
@@ -30,13 +18,14 @@ class Warlock {
 	public:
 		Warlock(std::string, std::string);
 		virtual ~Warlock();
+		void setTitle(std::string);
 		std::string getName() const;
 		std::string getTitle() const;
-		void setTitle(std::string);
 		void introduce() const;
+
 		void learnSpell(ASpell*);
 		void forgetSpell(std::string);
-		void launchSpell(std::string, ATarget&);
+		void launchSpell(std::string, ATarget const&);
 };
 
 #endif

@@ -10,9 +10,9 @@
  {
    Warlock richard("Richard", "foo");
    richard.setTitle("Hello, I'm Richard the Warlock!");
-   Dummy model1;
+   BrickWall model1;
 
-   Polymorph* polymorph = new Polymorph();
+   Fwoosh* polymorph = new Fwoosh();
    TargetGenerator tarGen;
 
    tarGen.learnTargetType(&model1);
@@ -22,9 +22,9 @@
 
    richard.learnSpell(fireball);
 
-   ATarget* wall = tarGen.createTarget("Target Practice Dummy");
+   ATarget* wall = tarGen.createTarget("Wall");
 
    richard.introduce();
-   richard.launchSpell("Polymorph", *wall);
+   richard.launchSpell("Fwoosh", *wall);
    richard.launchSpell("Fireball", *wall);
  }

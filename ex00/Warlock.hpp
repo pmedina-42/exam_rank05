@@ -1,20 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Warlock.hpp                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pmedina- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 20:04:42 by pmedina-          #+#    #+#             */
-/*   Updated: 2022/02/16 20:39:50 by pmedina-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef WARLOCK_H
-# define WARLOCK_H
+#define WARLOCK_H
 
-#include <string>
 #include <iostream>
+#include <string>
 
 class Warlock {
 	private:
@@ -24,9 +12,9 @@ class Warlock {
 	public:
 		Warlock(std::string, std::string);
 		virtual ~Warlock();
+		void setTitle(std::string);
 		std::string getName() const;
 		std::string getTitle() const;
-		void setTitle(std::string);
 		void introduce() const;
 };
 
